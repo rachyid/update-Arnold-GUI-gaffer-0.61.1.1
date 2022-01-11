@@ -1,0 +1,37 @@
+
+	-- gaffer-0.61.1.1-windows --
+#-------------------------------------------------------------------
+# Added some OSL shaders(15 osl shaders)
+# Added some Maya Shaders (19 Shaders)
+# Added ambient_occlusion_lightfilter (from:https://www.masd.dk/arnold-ao-light-filter/)
+#-------------------------------------------------------------------
+# email: elrachyd@gmail.com
+# Date:  1/11/2022
+#-------------------------------------------------------------------
+#Rearrange nodes so that appear exactly as Maya hypershade:
+#menu Arnold/Shader/Utility=>Shader
+#menu Arnold/Shader/Utility=>Conversion
+#menu Arnold/Shader/Utility=>Data
+#menu Arnold/Shader/Utility=>Volume
+#-------------------------------------------------------------------
+#menu Arnold/Shader/AOV=>Cryptomatte
+#menu Arnold/Shader/OSL
+#menu Arnold/Shader/Maya Shader
+#-------------------------------------------------------------------
+# Edited [node standard_surface] and move cryptomatte to AOV menu
+#-------------------------------------------------------------------
+# Build some GUI for : 
+#[node cryptomatte]
+#[node color_jitter]
+#[node standard_volume]
+#[node layer_shader]
+#[node layer_rgba] 
+#[node layer_float]
+#[node image]
+#[node float_to_matrix]
+#[node maya_layered_shader]
+#-------------------------------------------------------------------
+# Hide some Arnold & cinema4D shaders:
+#[node visible_light], [node query_shape]
+#[node c4d_texture_tag_rgba],[node c4d_texture_tag]
+#-------------------------------------------------------------------
